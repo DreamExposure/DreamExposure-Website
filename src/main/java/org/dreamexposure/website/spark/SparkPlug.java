@@ -6,6 +6,7 @@ import org.dreamexposure.website.database.DatabaseManager;
 import org.dreamexposure.website.objects.SiteSettings;
 import org.dreamexposure.website.objects.api.APIAccount;
 import org.dreamexposure.website.utils.Logger;
+import spark.ModelAndView;
 
 import static spark.Spark.*;
 
@@ -78,8 +79,6 @@ public class SparkPlug {
             });
         });
 
-        //TODO: UNCOMMENT WHEN I START ON THIS SHIT
-        /*
         //Templates and pages...
         get("/", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/index"), new ThymeleafTemplateEngine());
         get("/home", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/index"), new ThymeleafTemplateEngine());
@@ -94,8 +93,8 @@ public class SparkPlug {
 
         //Policy pages
         get("/policy/privacy", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/policy/privacy"), new ThymeleafTemplateEngine());
+        get("/policy/tos", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/policy/terms"), new ThymeleafTemplateEngine());
 
-        */
         //Callback URLs for various stuffs
         get("/confirm/email", AccountEndpoint::confirmEmail);
     }
