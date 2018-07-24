@@ -2,6 +2,7 @@ package org.dreamexposure.website.spark;
 
 import org.dreamexposure.website.account.AccountHandler;
 import org.dreamexposure.website.api.v1.endpoints.AccountEndpoint;
+import org.dreamexposure.website.api.v1.endpoints.ContactEndpoint;
 import org.dreamexposure.website.database.DatabaseManager;
 import org.dreamexposure.website.objects.SiteSettings;
 import org.dreamexposure.website.objects.api.APIAccount;
@@ -42,10 +43,11 @@ public class SparkPlug {
                         Logger.getLogger().api("User registering account.", request.ip());
                     } else if (key.equals("LOGIN_ACCOUNT") && request.pathInfo().equals("/api/v1/account/login")) {
                         Logger.getLogger().api("user logging into account.", request.ip());
-                    } else if (key.equals("CHECK_PLUGIN") && request.pathInfo().equals("/api/v1/plugin/check")) {
-                        Logger.getLogger().api("MC Server checking plugin version.", request.ip());
+                    } else if (key.equals("CONTACT") && request.pathInfo().equals("/api/v1/contact")) {
+                        Logger.getLogger().api("User sending contact email", request.ip());
                     } else {
                         APIAccount acc = DatabaseManager.getManager().getAPIAccount(key);
+
                         if (acc != null) {
                             if (acc.isBlocked()) {
                                 Logger.getLogger().api("Attempted to use blocked API Key: " + acc.getAPIKey(), request.ip());
@@ -73,6 +75,9 @@ public class SparkPlug {
         //API endpoints
         path("/api/v1", () -> {
             before("/*", (q, a) -> System.out.println("Received API call from: " + q.ip() + "; Host:" + q.host()));
+
+            post("/contact", ContactEndpoint::handle);
+
             path("/account", () -> {
                 post("/register", AccountEndpoint::register);
                 post("/login", AccountEndpoint::login);
@@ -84,6 +89,20 @@ public class SparkPlug {
         get("/home", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/index"), new ThymeleafTemplateEngine());
         get("/about", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/about"), new ThymeleafTemplateEngine());
         get("/contact", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/contact"), new ThymeleafTemplateEngine());
+
+        //Account page pre-processing
+        before("/account/register", (rq, rs) -> {
+            if (AccountHandler.getHandler().hasAccount(rq.session().id())) {
+                //User currently logged in...
+                rs.redirect("/account", 301);
+            }
+        });
+        before("/account/login", (rq, rs) -> {
+            if (AccountHandler.getHandler().hasAccount(rq.session().id())) {
+                //User currently logged in...
+                rs.redirect("/account", 301);
+            }
+        });
 
         //Account pages
         get("/account", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/account/account"), new ThymeleafTemplateEngine());

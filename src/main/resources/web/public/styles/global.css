@@ -21,7 +21,10 @@ body {
 footer {
     position: absolute;
     bottom: 0;
-    height: 25px;
+    background: #1b1f20;
+    color: white;
+
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -80,6 +83,18 @@ button.danger:hover {
     background-color: white;
 }
 
+a {
+    color: #f47027;
+}
+
+a:hover {
+    color: #e3d324;
+}
+
+a:visited {
+    color: #d5640d;
+}
+
 hr {
     color: #f47027;
     background-color: #f47027;
@@ -92,8 +107,8 @@ hr {
 
 /* Wrappers */
 #content {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: auto;
     background-color: white;
 
@@ -130,13 +145,33 @@ hr {
     background-color: #f47027;
 }
 
-.top-nav a {
+.top-nav h1 {
     float: left;
-    display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
-    font-size: 17px;
+    margin: auto 15px;
+}
+
+.top-nav h1:hover {
+    color: #090809;
+}
+
+.top-nav a.title {
+    padding: 0;
+    margin: auto 15px;
+}
+
+.top-nav a.title:hover {
+    color: #090809;
+    background: transparent;
+}
+
+.top-nav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 15px 18px;
+    font-size: 20px;
     text-decoration: none;
 }
 
@@ -147,15 +182,15 @@ hr {
 }
 
 .top-nav a.active {
-    background-color: #090809;
+    background-color: #3c3d41;
     color: white;
 }
 
 .top-nav a.account {
     float: right;
     text-align: center;
-    padding: 14px 16px;
-    font-size: 17px;
+    padding: 15px 18px;
+    font-size: 20px;
     text-decoration: none;
 }
 
@@ -167,20 +202,24 @@ hr {
     font-size: 20px;
     text-decoration: none;
 }
-
 /* The dropdown container */
 .dropdown {
     float: left;
     overflow: hidden;
 }
 
+.dropdown#account-drop {
+    float: right;
+    overflow: hidden;
+}
+
 /* Dropdown button */
 .dropdown .dropbtn {
-    font-size: 16px;
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 15px 18px;
+    font-size: 20px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
@@ -195,9 +234,10 @@ hr {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
+
+    overflow: hidden;
 }
 
 .dropdown-content a {
@@ -207,6 +247,8 @@ hr {
     text-decoration: none;
     display: block;
     text-align: left;
+
+    overflow: hidden;
 }
 
 .dropdown-content a:hover {

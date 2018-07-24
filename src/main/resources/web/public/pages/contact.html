@@ -10,7 +10,7 @@
 		<meta property="og:url" content="https://www.dreamexposure.org"/>
 		<meta property="og:description" content="DreamExposure - Envision a new reality"/>
 		<!--meta property="og:image" content="I WILL PUT THE LOGO IN WHEN I MAKE IT SMALL"/-->
-		<title>Privacy && DreamExposure</title>
+		<title>Contact && DreamExposure</title>
 
 		<!--Locally Hosted Files-->
 		<link rel="stylesheet" href="/styles/global.css">
@@ -20,7 +20,7 @@
 		<div class="top-nav">
 			<a href="/" class="title"><h1>DreamExposure</h1></a>
 			<a href="/about">About</a>
-			<a href="/contact">Contact</a>
+			<a class="active" href="/contact">Contact</a>
 			<div class="dropdown">
 				<button class="dropbtn">Plugins</button>
 				<div class="dropdown-content">
@@ -36,7 +36,7 @@
 					<a href="https://ticketbird.novamaday.com" target="_blank">TicketBird</a>
 				</div>
 			</div>
-			<a href="https://wiki.novamaday.com">Wiki</a>
+			<a href="https://wiki.novamaday.com" target="_blank">Wiki</a>
 			<a href="https://jenkins.novamaday.com" target="_blank">Jenkins</a>
 			<a href="https://www.patreon.com/Novafox" target="_blank">Patreon</a>
 
@@ -52,8 +52,39 @@
 		</div>
 
 		<div id="content">
-			<h1>Privacy Policy</h1>
-
+			<h1>Contact Us</h1>
+			<div id="contact-form">
+				<form id="contact" action="javascript:onSubmit()">
+					<label>Subject
+						<br>
+						<input type="text" id="subject" required>
+					</label>
+					<br>
+					<br>
+					<label>Message
+						<br>
+						<input type="text" id="message" required>
+					</label>
+					<br>
+					<br>
+					<label>Name
+						<br>
+						<input type="text" id="name" required>
+					</label>
+					<br>
+					<br>
+					<label>Your Email
+						<br>
+						<input type="email" id="email" required>
+					</label>
+					<br>
+					<br>
+					<div class="g-recaptcha" data-sitekey="6LcU8mUUAAAAAGJ7xXlw7hJ9daZY9_jwzoebRF3q"></div>
+					<br>
+					<br>
+					<input class="submit" type="submit" value="Submit">
+				</form>
+			</div>
 		</div>
 	</body>
 

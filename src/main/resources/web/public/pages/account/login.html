@@ -25,7 +25,7 @@
 
 	<body>
 		<div class="top-nav">
-			<a href="/">Home</a>
+			<a href="/" class="title"><h1>DreamExposure</h1></a>
 			<a href="/about">About</a>
 			<a href="/contact">Contact</a>
 			<div class="dropdown">
@@ -47,9 +47,15 @@
 			<a href="https://jenkins.novamaday.com" target="_blank">Jenkins</a>
 			<a href="https://www.patreon.com/Novafox" target="_blank">Patreon</a>
 
-			<a class="account" th:if="${loggedIn}" href="/account/logout">Log out</a>
-			<a class="account" th:unless="${loggedIn}" href="/account/register">Register</a>
-			<a class="account" th:unless="${loggedIn}" href="/account/login">Log In</a>
+			<div class="dropdown" id="account-drop">
+				<button class="dropbtn">Account</button>
+				<div class="dropdown-content">
+					<a th:if="${loggedIn}" href="/account">Account</a>
+					<a th:if="${loggedIn}" href="/account/logout">Log out</a>
+					<a th:unless="${loggedIn}" href="/account/register">Register</a>
+					<a class="active" th:unless="${loggedIn}" href="/account/login">Log In</a>
+				</div>
+			</div>
 		</div>
 
 		<div id="content">
@@ -71,7 +77,7 @@
 					</label>
 					<br>
 					<br>
-					<div class="g-recaptcha" data-sitekey="6Lea-lQUAAAAAJ6baxR5Gz8hlcbJyfZPhVvAO9cR"></div>
+					<div class="g-recaptcha" data-sitekey="6LcU8mUUAAAAAGJ7xXlw7hJ9daZY9_jwzoebRF3q"></div>
 					<br>
 					<br>
 					<input class="submit" type="submit" value="Login">
