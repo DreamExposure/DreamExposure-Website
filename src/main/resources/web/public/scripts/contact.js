@@ -14,10 +14,10 @@ function onSubmit() {
             "Content-Type": "application/json"
         },
         method: "POST",
-        dataType: "json",
         data: JSON.stringify(bodyRaw),
-        success: function (data) {
-            document.getElementById("contact").hidden = true;
+        success: function (jqXHR, textStatus) {
+            formHide("contact");
+            formShow("thanks");
             showSnackbar("Email Sent! Thank you for contacting us!");
         },
         error: function (jqXHR, textStatus, errorThrown) {

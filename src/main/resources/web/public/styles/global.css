@@ -33,23 +33,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    size: 32pt;
+    font-size: 32pt;
 }
 
 h2 {
-    size: 28pt;
+    font-size: 28pt;
 }
 
 h3 {
-    size: 24pt
+    font-size: 24pt
 }
 
 h4, h5, h6 {
-    size: 20pt;
+    font-size: 20pt;
 }
 
 p {
-    size: 16pt;
+    font-size: 16pt;
 }
 
 button {
@@ -109,12 +109,14 @@ hr {
 #content {
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: auto;
+    margin-bottom: 5%;
     background-color: white;
 
     padding: 10px;
 
     text-align: center;
+
+    display: flow-root;
 }
 
 .image-wrapper {
@@ -202,6 +204,7 @@ hr {
     font-size: 20px;
     text-decoration: none;
 }
+
 /* The dropdown container */
 .dropdown {
     float: left;
@@ -372,55 +375,4 @@ pre {
         bottom: 0;
         opacity: 0;
     }
-}
-
-/* Form stuffs */
-textarea {
-    resize: none;
-}
-
-select {
-    border: 1px solid black;
-    border-radius: 2px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    width: 200px;
-}
-
-input {
-    width: 200px;
-}
-
-input.submit {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border: 1px solid #b00a95;
-}
-
-input.submit:hover {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border: 1px solid #b00a95;
-    background: gray;
-    color: white;
-}
-
-input.reset {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border: 1px solid black;
-    background: #b00a95;
-    color: black;
-}
-
-input.reset:hover {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border: 1px solid white;
-    background: white;
-    color: black;
-}
-
-label {
-    color: black;
 }
