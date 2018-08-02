@@ -90,37 +90,39 @@
 			</div>
 			<div th:unless="${loggedIn}">
 				<h1>Register</h1>
-				<form id="register" action="javascript:onSubmit()">
-					<label>Email
+				<div class="form-wrapper">
+					<form id="register" action="javascript:onSubmit()">
+						<label>Email
+							<br>
+							<input type="email" id="email" required>
+						</label>
 						<br>
-						<input type="email" id="email" required>
-					</label>
-					<br>
-					<br>
-					<label>Username
 						<br>
-						<input type="text" maxlength="64" id="username" required>
-					</label>
-					<br>
-					<br>
-					<label>Password (Min. 8 characters)
+						<label>Username
+							<br>
+							<input type="text" maxlength="64" id="username" required>
+						</label>
 						<br>
-						<input type="password" minlength="8" id="password" required>
-					</label>
-					<br>
-					<br>
-					<label>Confirm Password
 						<br>
-						<input type="password" minlength="8" id="password-confirm" oninput="checkValidity(this)"
-						       required>
-					</label>
-					<br>
-					<br>
-					<div class="g-recaptcha" data-sitekey="6LcU8mUUAAAAAGJ7xXlw7hJ9daZY9_jwzoebRF3q"></div>
-					<br>
-					<br>
-					<input class="submit" type="submit" value="Register Account">
-				</form>
+						<label>Password (Min. 8 characters)
+							<br>
+							<input type="password" minlength="8" id="password" required>
+						</label>
+						<br>
+						<br>
+						<label>Confirm Password
+							<br>
+							<input type="password" minlength="8" id="password-confirm" oninput="checkValidity(this)"
+							       required>
+						</label>
+						<br>
+						<br>
+						<div class="g-recaptcha" data-sitekey="6LcU8mUUAAAAAGJ7xXlw7hJ9daZY9_jwzoebRF3q"></div>
+						<br>
+						<br>
+						<input class="submit" type="submit" value="Register Account">
+					</form>
+				</div>
 				<br>
 				<br>
 				<h3><span>Already have an account? </span><a href="/account/login">Login</a></h3>

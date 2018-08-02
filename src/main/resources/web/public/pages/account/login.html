@@ -90,24 +90,26 @@
 			</div>
 			<div th:unless="${loggedIn}">
 				<h1>Login</h1>
-				<form id="login" action="javascript:onSubmit()">
-					<label>Email
+				<div class="form-wrapper">
+					<form id="login" action="javascript:onSubmit()">
+						<label>Email
+							<br>
+							<input type="email" id="email" required>
+						</label>
 						<br>
-						<input type="email" id="email" required>
-					</label>
-					<br>
-					<br>
-					<label>Password
 						<br>
-						<input type="password" minlength="8" id="password" required>
-					</label>
-					<br>
-					<br>
-					<div class="g-recaptcha" data-sitekey="6LcU8mUUAAAAAGJ7xXlw7hJ9daZY9_jwzoebRF3q"></div>
-					<br>
-					<br>
-					<input class="submit" type="submit" value="Login">
-				</form>
+						<label>Password
+							<br>
+							<input type="password" minlength="8" id="password" required>
+						</label>
+						<br>
+						<br>
+						<div class="g-recaptcha" data-sitekey="6LcU8mUUAAAAAGJ7xXlw7hJ9daZY9_jwzoebRF3q"></div>
+						<br>
+						<br>
+						<input class="submit" type="submit" value="Login">
+					</form>
+				</div>
 				<br>
 				<br>
 				<h3><span>Don't have an account? </span><a href="/account/register">Register</a></h3>

@@ -24,7 +24,7 @@ public class EmailHandler {
 
     public void init() {
 
-        mailer = MailerBuilder.withSMTPServer("smtp.gmail.com", 465, SiteSettings.EMAIL_USER.get(), SiteSettings.EMAIL_PASS.get()).withTransportStrategy(TransportStrategy.SMTPS).buildMailer();
+        mailer = MailerBuilder.withSMTPServer(SiteSettings.SMTP_HOST.get(), Integer.valueOf(SiteSettings.SMTP_PORT.get()), SiteSettings.EMAIL_USER.get(), SiteSettings.EMAIL_PASS.get()).withTransportStrategy(TransportStrategy.SMTP).buildMailer();
     }
 
     public void sendEmailConfirm(String emailTo, String confirmationLink) {
