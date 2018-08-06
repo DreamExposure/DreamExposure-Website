@@ -11,6 +11,7 @@ public class EmailHandler {
     private static EmailHandler instance;
 
     private Mailer mailer;
+    private String lineBreak = System.lineSeparator();
 
     private EmailHandler() {
     }
@@ -41,7 +42,33 @@ public class EmailHandler {
     public void sendContactEmail(String subject, String message, String name, String emailFrom) {
         Email email = EmailBuilder.startingBlank()
                 .from(name, emailFrom)
-                .to(SiteSettings.EMAIL_USER.get())
+                .to("contact@dreamexposure.org")
+                .withSubject(subject)
+                .withPlainText(message)
+                .buildEmail();
+
+        mailer.sendMail(email);
+    }
+
+    public void sendJobApplicationEmail(String subject, String messageOr, String name, String emailFrom, String position, String resume) {
+        String message = messageOr + lineBreak + "Position: " + position + lineBreak + "Resume/CV Link: " + resume;
+
+        Email email = EmailBuilder.startingBlank()
+                .from(name, emailFrom)
+                .to("contact@dreamexposure.org")
+                .withSubject(subject)
+                .withPlainText(message)
+                .buildEmail();
+
+        mailer.sendMail(email);
+    }
+
+    public void sendQuoteEmail(String subject, String messageOr, String name, String emailFrom, String budget, String timeFrame) {
+        String message = messageOr + lineBreak + "Estimated Budget: " + budget + lineBreak + "Goal TimeFrame: " + timeFrame;
+
+        Email email = EmailBuilder.startingBlank()
+                .from(name, emailFrom)
+                .to("contact@dreamexposure.org")
                 .withSubject(subject)
                 .withPlainText(message)
                 .buildEmail();

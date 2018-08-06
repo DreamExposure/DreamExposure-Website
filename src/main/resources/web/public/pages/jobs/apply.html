@@ -34,11 +34,19 @@
 		<meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
 		<!-- ****** faviconit.com favicons ****** -->
 
-		<title>Appy && DreamExposure</title>
+		<title>Apply && DreamExposure</title>
 
 		<!--Locally Hosted Files-->
 		<link rel="stylesheet" href="/styles/global.css">
-		<link rel="stylesheet" href="/styles/team.css">
+		<link rel="stylesheet" href="/styles/better-forms.css">
+
+		<script src="/scripts/snackbar.js"></script>
+		<script src="/scripts/jobs/applyform.js"></script>
+		<script src="/scripts/better-forms.js"></script>
+
+		<!--Externally hosted-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 
 	<body>
@@ -77,10 +85,70 @@
 		</div>
 
 		<div id="content">
-			<h1>Apply for a Job with DreamExposure</h1>
+			<h1>Apply for a Job at DreamExposure</h1>
+			<div>
+				<p>
+					We are looking for talented and skilled individuals to work for us and help others envision a new
+					and improved reality. Step one is filing out the simple form below so we can get to know you.
+					<br>
+					Current job openings include: Staff Recruiter, Java Developer, C# Developer, Web Developer, Systems
+					admin, Sales Representative, and Support Staff.
+				</p>
+			</div>
 
+			<div id="contact-form" class="form-wrapper">
+				<form id="contact" action="javascript:onSubmit()" class="form-hideable show">
+					<label>Subject
+						<br>
+						<input type="text" id="subject" required class="small" placeholder="Job Application">
+					</label>
+					<br>
+					<br>
+					<label>Message
+						<br>
+						<textarea id="message" required class="large" placeholder="Tell us about yourself"></textarea>
+					</label>
+					<br>
+					<br>
+					<label>Position
+						<br>
+						<input type="text" id="position" required class="small" placeholder="Java Developer">
+					</label>
+					<br>
+					<br>
+					<label>Resume or CV Link
+						<br>
+						<input type="url" id="resume" required class="small"
+						       placeholder="https://yourwebsite.com/resume">
+					</label>
+					<br>
+					<br>
+					<label>Name
+						<br>
+						<input type="text" id="name" required class="small" placeholder="Jane Smith">
+					</label>
+					<br>
+					<br>
+					<label>Your Email
+						<br>
+						<input type="email" id="email" required class="small" placeholder="youremail@example.com">
+					</label>
+					<br>
+					<br>
+					<div class="g-recaptcha" data-sitekey="6LcU8mUUAAAAAGJ7xXlw7hJ9daZY9_jwzoebRF3q"></div>
+					<br>
+					<br>
+					<input class="submit" type="submit" value="Submit">
+				</form>
 
+				<div id="thanks" class="form-hideable" style="font-size: 25px; color: white;">
+					<p>Thank you for applying to DreamExposure! We hope to work with you soon. Check your inbox for
+						replies within 24 hours.</p>
+				</div>
+			</div>
 		</div>
+
+		<div id="snackbar"></div>
 	</body>
 
 	<footer id="footer">

@@ -114,6 +114,7 @@ public class SparkPlug {
 
         //Jobs
         get("/apply", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/jobs/apply"), new ThymeleafTemplateEngine());
+        get("/quote", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/jobs/quote"), new ThymeleafTemplateEngine());
 
 
         //Policy pages

@@ -2,9 +2,11 @@ function onSubmit() {
     var bodyRaw = {
         "subject": document.getElementById("subject").value,
         "message": document.getElementById("message").value,
+        "budget": document.getElementById("budget").value,
+        "time-frame": document.getElementById("time-frame").value,
         "name": document.getElementById("name").value,
         "email": document.getElementById("email").value,
-        "type": "general",
+        "type": "job-application",
         "gcap": grecaptcha.getResponse()
     };
 
@@ -19,7 +21,7 @@ function onSubmit() {
         success: function (jqXHR, textStatus) {
             formHide("contact");
             formShow("thanks");
-            showSnackbar("Email Sent! Thank you for contacting us!");
+            showSnackbar("Email Sent! Thank you for requesting a quote!");
         },
         error: function (jqXHR, textStatus, errorThrown) {
             showSnackbar(jqXHR.responseText);
