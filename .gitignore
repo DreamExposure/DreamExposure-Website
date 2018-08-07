@@ -48,3 +48,4 @@ fabric.properties
 /.idea/
 **/*.iml
 **/META-INF/
+**/dependency-reduced-pom.xml
