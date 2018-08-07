@@ -116,6 +116,11 @@ public class SparkPlug {
         get("/apply", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/jobs/apply"), new ThymeleafTemplateEngine());
         get("/quote", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/jobs/quote"), new ThymeleafTemplateEngine());
 
+        //Plugins
+        get("/plugins/perworldchatplus", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/plugins/perworldchatplus"), new ThymeleafTemplateEngine());
+        get("plugins/insane-warps", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/plugins/insanewarps"), new ThymeleafTemplateEngine());
+        get("plugins/novalib", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/plugins/novalib"), new ThymeleafTemplateEngine());
+
 
         //Policy pages
         get("/policy/privacy", (rq, rs) -> new ModelAndView(AccountHandler.getHandler().getAccount(rq.session().id()), "pages/policy/privacy"), new ThymeleafTemplateEngine());
