@@ -2,13 +2,14 @@ package org.dreamexposure.website.account;
 
 import org.dreamexposure.website.objects.SiteSettings;
 
+import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
-@SuppressWarnings("unchecked")
+@SuppressWarnings({"unchecked", "RedundantCast"})
 public class AccountHandler {
     private static AccountHandler instance;
     private static Timer timer;
@@ -43,14 +44,14 @@ public class AccountHandler {
     }
 
     //Boolean/checkers
-    public boolean hasAccount(String sessionId) {
-        return accounts.containsKey(sessionId);
+    public boolean hasAccount(HttpServletRequest request) {
+        return accounts.containsKey((String) request.getSession(true).getAttribute("account"));
     }
 
     //Getters
-    public Map getAccount(String sessionId) {
-        if (accounts.containsKey(sessionId)) {
-            Map m = accounts.get(sessionId);
+    public Map getAccount(HttpServletRequest request) {
+        if (accounts.containsKey((String) request.getSession(true).getAttribute("account"))) {
+            Map m = accounts.get((String) request.getSession(true).getAttribute("account"));
             m.remove("lastUse");
             m.put("lastUse", System.currentTimeMillis());
             return m;
@@ -81,16 +82,16 @@ public class AccountHandler {
     }
 
     //Functions
-    public void addAccount(Map m, String sessionId) {
-        accounts.remove(sessionId);
+    public void addAccount(Map m, HttpServletRequest request) {
+        accounts.remove((String) request.getSession(true).getAttribute("account"));
         m.remove("lastUse");
         m.put("lastUse", System.currentTimeMillis());
-        accounts.put(sessionId, m);
+        accounts.put((String) request.getSession(true).getAttribute("account"), m);
     }
 
 
-    public void removeAccount(String sessionId) {
-        accounts.remove(sessionId);
+    public void removeAccount(HttpServletRequest request) {
+        accounts.remove((String) request.getSession(true).getAttribute("account"));
     }
 
     private void removeTimedOutAccounts() {

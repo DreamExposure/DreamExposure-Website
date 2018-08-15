@@ -2,25 +2,45 @@ package org.dreamexposure.website.api.v1.endpoints;
 
 import de.triology.recaptchav2java.ReCaptcha;
 import org.dreamexposure.website.account.AccountHandler;
+import org.dreamexposure.website.crypto.Authentication;
 import org.dreamexposure.website.database.DatabaseManager;
 import org.dreamexposure.website.objects.SiteSettings;
-import org.dreamexposure.website.objects.user.Confirmation;
+import org.dreamexposure.website.objects.crypto.AuthenticationState;
 import org.dreamexposure.website.objects.user.User;
 import org.dreamexposure.website.utils.EmailHandler;
 import org.dreamexposure.website.utils.Generator;
 import org.dreamexposure.website.utils.Logger;
+import org.dreamexposure.website.utils.ResponseUtils;
 import org.json.JSONObject;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import spark.Request;
-import spark.Response;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
+@SuppressWarnings("ThrowableNotThrown")
+@RestController
+@RequestMapping("/api/v1/account")
 public class AccountEndpoint {
-    public static String register(Request request, Response response) {
-        JSONObject body = new JSONObject(request.body());
+
+    @PostMapping(value = "/register")
+    public static String register(HttpServletRequest request, HttpServletResponse response, @RequestBody String requestBody) {
+        //Authenticate...
+        AuthenticationState authState = Authentication.authenticate(request, "/api/v1/account/register");
+        if (!authState.isSuccess()) {
+            response.setStatus(authState.getStatus());
+            response.setContentType("application/json");
+            return authState.toJson();
+        }
+
+        //Okay, now handle actual request.
+        JSONObject body = new JSONObject(requestBody);
         if (body.has("username") && body.has("email") && body.has("password") && body.has("gcap")) {
             if (new ReCaptcha(SiteSettings.RECAP_KEY.get()).isValid(body.getString("gcap"))) {
                 String username = body.getString("username");
@@ -39,27 +59,37 @@ public class AccountEndpoint {
                     m.put("year", LocalDate.now().getYear());
                     m.put("loggedIn", true);
                     m.put("account", account);
-                    AccountHandler.getHandler().addAccount(m, request.session().id());
+                    AccountHandler.getHandler().addAccount(m, request);
 
-                    response.status(200);
-                    response.body(new JSONObject().put("message", "Success").toString());
+                    response.setContentType("application/json");
+                    response.setStatus(200);
+                    return ResponseUtils.getJsonResponseMessage("Success!");
                 } else {
-                    response.status(400);
-                    response.body("Username/Email taken!");
+                    response.setStatus(400);
+                    return "Email/Username Invalid!";
                 }
             } else {
-                response.status(400);
-                response.body("Failed to verify ReCaptcha!");
+                response.setStatus(400);
+                return "Failed to verify ReCAPTCHA!";
             }
         } else {
-            response.status(400);
-            response.body("Invalid Request!");
+            response.setStatus(400);
+            return "Invalid Request!";
         }
-        return response.body();
     }
 
-    public static String login(Request request, Response response) {
-        JSONObject body = new JSONObject(request.body());
+    @PostMapping(value = "/login", produces = "application/json")
+    public static String login(HttpServletRequest request, HttpServletResponse response, @RequestBody String requestBody) {
+        //Authenticate...
+        AuthenticationState authState = Authentication.authenticate(request, "/api/v1/account/login");
+        if (!authState.isSuccess()) {
+            response.setStatus(authState.getStatus());
+            response.setContentType("application/json");
+            return authState.toJson();
+        }
+
+        //Okay, now handle actual request.
+        JSONObject body = new JSONObject(requestBody);
         if (body.has("email") && body.has("password") && body.has("gcap")) {
             if (new ReCaptcha(SiteSettings.RECAP_KEY.get()).isValid(body.getString("gcap"))) {
                 String email = body.getString("email");
@@ -71,55 +101,25 @@ public class AccountEndpoint {
                     m.put("year", LocalDate.now().getYear());
                     m.put("loggedIn", true);
                     m.put("account", account);
-                    AccountHandler.getHandler().addAccount(m, request.session().id());
+                    AccountHandler.getHandler().addAccount(m, request);
 
-                    Logger.getLogger().api("User logged into account: " + account.getUsername(), request.ip());
+                    Logger.getLogger().api("User logged into account: " + account.getUsername(), request.getRemoteAddr());
 
-                    response.status(200);
-                    response.body(new JSONObject().put("message", "Success!").toString());
+                    response.setContentType("application/json");
+                    response.setStatus(200);
+                    return ResponseUtils.getJsonResponseMessage("Success!");
                 } else {
-                    response.status(400);
-                    response.body("Email/password invalid!");
+                    response.setStatus(400);
+                    return "Email/Password Invalid!";
                 }
             } else {
-                response.status(400);
-                response.body("Failed to verify ReCaptcha!");
+                response.setStatus(400);
+                return "Failed to verify ReCAPTCHA!";
             }
         } else {
-            response.status(400);
-            response.body("Invalid Request!");
+            response.setStatus(400);
+            return "Invalid Request!";
         }
-        return response.body();
     }
 
-    public static String logout(Request request, Response response) {
-        AccountHandler.getHandler().removeAccount(request.session().id());
-        response.redirect("/", 301);
-        return response.body();
-    }
-
-    public static String confirmEmail(Request request, Response response) {
-        if (request.queryParams().contains("code")) {
-            String code = request.queryParams("code");
-            Confirmation con = DatabaseManager.getManager().getConfirmationInfo(code);
-            if (con != null) {
-                User user = DatabaseManager.getManager().getUserFromId(con.getUserId());
-                user.setEmailConfirmed(true);
-                DatabaseManager.getManager().removeConfirmationInfo(code);
-                DatabaseManager.getManager().updateUser(user);
-
-                Logger.getLogger().api("Confirmed user email: " + user.getId(), request.ip());
-
-                //Success... redirect to account page.
-                response.redirect("/account", 301);
-            } else {
-                response.status(400);
-                response.body("Invalid Code");
-            }
-        } else {
-            response.status(400);
-            response.body("Invalid Request");
-        }
-        return response.body();
-    }
 }
