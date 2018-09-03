@@ -1,5 +1,7 @@
 package org.dreamexposure.website.database;
 
+import org.dreamexposure.novautils.database.MySQL;
+
 import java.sql.Connection;
 
 @SuppressWarnings("unused")

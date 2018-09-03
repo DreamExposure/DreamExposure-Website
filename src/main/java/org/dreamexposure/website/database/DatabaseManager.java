@@ -1,5 +1,6 @@
 package org.dreamexposure.website.database;
 
+import org.dreamexposure.novautils.database.MySQL;
 import org.dreamexposure.website.objects.SiteSettings;
 import org.dreamexposure.website.objects.api.APIAccount;
 import org.dreamexposure.website.objects.user.Confirmation;

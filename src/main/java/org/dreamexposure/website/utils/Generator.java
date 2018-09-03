@@ -1,6 +1,6 @@
 package org.dreamexposure.website.utils;
 
-import org.dreamexposure.website.crypto.KeyGenerator;
+import org.dreamexposure.novautils.crypto.KeyGenerator;
 import org.dreamexposure.website.database.DatabaseManager;
 import org.dreamexposure.website.objects.user.User;
 
