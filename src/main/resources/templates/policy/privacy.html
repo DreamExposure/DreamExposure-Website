@@ -1,126 +1,240 @@
-<!DOCTYPE HTML>
-<!--suppress HtmlUnknownTarget -->
-<html xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<!--Meta stuffs-->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="DreamExposure - Envision a new reality">
-		<meta property="og:title" content="DreamExposure"/>
-		<meta property="og:url" content="https://www.dreamexposure.org"/>
-		<meta property="og:description" content="DreamExposure - Envision a new reality"/>
-		<meta property="og:image" content="/assets/images/logo/Dream_Exposure_Logo_White.jpg">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
-		<!-- ****** faviconit.com favicons ****** -->
-		<link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
-		<link rel="icon" sizes="16x16 32x32 64x64" href="/assets/images/favicons/favicon.ico">
-		<link rel="icon" type="image/png" sizes="196x196" href="/assets/images/favicons/favicon-192.png">
-		<link rel="icon" type="image/png" sizes="160x160" href="/assets/images/favicons/favicon-160.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicons/favicon-96.png">
-		<link rel="icon" type="image/png" sizes="64x64" href="/assets/images/favicons/favicon-64.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16.png">
-		<link rel="apple-touch-icon" href="/assets/images/favicons/favicon-57.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicons/favicon-114.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicons/favicon-72.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicons/favicon-144.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/favicon-60.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicons/favicon-120.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicons/favicon-76.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicons/favicon-152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/favicon-180.png">
-		<meta name="msapplication-TileColor" content="#FFFFFF">
-		<meta name="msapplication-TileImage" content="/assets/images/favicons/favicon-144.png">
-		<meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
-		<!-- ****** faviconit.com favicons ****** -->
+	<!--Meta Stuffs-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="DreamExposure Studios - Envision a new reality">
+	<meta property="og:title" content="DreamExposure Studios"/>
+	<meta property="og:url" content="https://www.dreamexposure.org"/>
+	<meta property="og:description" content="DreamExposure Studios - Envision a new reality"/>
+	<meta property="og:image" content="/img/logo/Dream_Exposure_Logo_White.jpg">
 
-		<title>Privacy && DreamExposure</title>
 
-		<!--Locally Hosted Files-->
-		<link rel="stylesheet" href="/styles/global.css">
+	<!-- ****** faviconit.com favicons ****** -->
+	<link rel="shortcut icon" href="/img/favicons/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="/img/favicons/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="/img/favicons/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="/img/favicons/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="/img/favicons/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16.png">
+	<link rel="apple-touch-icon" href="/img/favicons/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="/img/favicons/favicon-144.png">
+	<meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+	<!-- ****** faviconit.com favicons ****** -->
+
+	<title>Privacy Policy && DreamExposure</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom fonts for this template -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+	      rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="/css/business-casual.css" rel="stylesheet">
+
+	<!--Externally Hosted-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+	        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	</head>
 
 	<body>
-		<div class="top-nav">
-			<a href="/" class="title"><h1>DreamExposure</h1></a>
-			<a href="/about">About</a>
-			<a href="/contact">Contact</a>
-			<div class="dropdown">
-				<button class="dropbtn">Plugins</button>
-				<div class="dropdown-content">
-					<a href="/plugins/perworldchatplus">PerWorldChatPlus</a>
-					<a href="/plugins/insane-warps">InsaneWarps</a>
-					<a href="/plugins/novalib">NovaLib</a>
+
+		<h1 class="site-heading text-center text-white d-none d-lg-block">
+			<span class="site-heading-upper text-primary mb-3">Envision a new Reality</span>
+			<span class="site-heading-lower">DreamExposure Studios</span>
+		</h1>
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+			<div class="container">
+				<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Menu</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav mx-auto">
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="/">Home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="/about">About</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="/products">Products</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="/store">Store</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" target="_blank"
+							   href="https://wikijs.dreamexposure.org">Wiki</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" target="_blank"
+							   href="https://jenkins.dreamexposure.org">Jenkins</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" target="_blank"
+							   href="/https://patreon.com/NovaFox">Patreon</a>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<div class="dropdown">
-				<button class="dropbtn">Discord Bots</button>
-				<div class="dropdown-content">
-					<a href="https://www.discalbot.com" target="_blank">DisCal</a>
-					<a href="https://ticketbird.novamaday.com" target="_blank">TicketBird</a>
+		</nav>
+
+		<section class="page-section about-heading">
+			<div class="container">
+				<img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
+				<div class="about-heading-content">
+					<div class="row">
+						<div class="col-xl-9 col-lg-10 mx-auto">
+							<div class="bg-faded rounded p-5">
+								<h2 class="section-heading mb-4">
+									<span class="section-heading-lower">Privacy Policy</span>
+								</h2>
+								<p>
+									This Privacy Policy describes how your personal information is collected, used, and
+									shared when you visit or make a purchase from https://dreamexposure.org (the
+									“Site”).
+								</p>
+								<p>
+									PERSONAL INFORMATION WE COLLECT
+									<br><br>
+									When you visit the Site, we automatically collect certain information about your
+									device, including information about your web browser, IP address, time zone, and
+									some of the cookies that are installed on your device. Additionally, as you browse
+									the Site, we collect information about the individual web pages or products that you
+									view, what websites or search terms referred you to the Site, and information about
+									how you interact with the Site. We refer to this automatically-collected information
+									as “Device Information.”
+									<br><br>
+									We collect Device Information using the following technologies:
+									<br>
+									- “Cookies” are data files that are placed on your device or computer and often
+									include an anonymous unique identifier. For more information about cookies, and how
+									to disable cookies, visit http://www.allaboutcookies.org.
+									<br>
+									- “Log files” track actions occurring on the Site, and collect data including your
+									IP address, browser type, Internet service provider, referring/exit pages, and
+									date/time stamps.
+									<br>
+									- “Web beacons,” “tags,” and “pixels” are electronic files used to record
+									information about how you browse the Site.
+									<br><br>
+									Additionally when you make a purchase or attempt to make a purchase through the
+									Site, we collect certain information from you, including your name, billing address,
+									shipping address, payment information (including credit card numbers), email
+									address, and phone number. We refer to this information as “Order Information.”
+									<br><br>
+									When we talk about “Personal Information” in this Privacy Policy, we are talking
+									both about Device Information and Order Information.
+								</p>
+								<p>
+									HOW DO WE USE YOUR PERSONAL INFORMATION?
+									<br><br>
+									We use the Order Information that we collect generally to fulfill any orders placed
+									through the Site (including processing your payment information, arranging for
+									shipping, and providing you with invoices and/or order confirmations). Additionally,
+									we use this Order Information to:
+									<br>
+									Communicate with you;
+									<br>
+									Screen our orders for potential risk or fraud.
+									<br><br>
+									We use the Device Information that we collect to help us screen for potential risk
+									and fraud (in particular, your IP address), and more generally to improve and
+									optimize our Site (for example, by generating analytics about how our customers
+									browse and interact with the Site, and to assess the success of our marketing and
+									advertising campaigns).
+								</p>
+								<p>
+									SHARING YOUR PERSONAL INFORMATION
+									<br><br>
+									We do not share your personal information with any 3rd parties unless explicitly
+									needed (for example, PayPal or Stripe for payment processing and shipping).
+								</p>
+								<p>
+									DO NOT TRACK
+									<br><br>
+									Please note that we do not alter our Site’s data collection and use practices when
+									we see a Do Not Track signal from your browser.
+								</p>
+								<p>
+									YOUR RIGHTS
+									<br><br>
+									If you are a European resident, you have the right to access personal information we
+									hold about you and to ask that your personal information be corrected, updated, or
+									deleted. If you would like to exercise this right, please contact us through the
+									contact information below.
+									<br><br>
+									Additionally, if you are a European resident we note that we are processing your
+									information in order to fulfill contracts we might have with you (for example if you
+									make an order through the Site), or otherwise to pursue our legitimate business
+									interests listed above. Additionally, please note that your information will be
+									transferred outside of Europe, including to Canada and the United States.
+								</p>
+								<p>
+									DATA RETENTION
+									<br><br>
+									When you place an order through the Site, we will maintain your Order Information
+									for our records unless and until you ask us to delete this information.
+								</p>
+								<p>
+									CHANGES
+									<br><br>
+									We may update this privacy policy from time to time in order to reflect, for
+									example, changes to our practices or for other operational, legal or regulatory
+									reasons.
+								</p>
+								<p>
+									CONTACT US
+									<br><br>
+									For more information about our privacy practices, if you have questions, or if you
+									would like to make a complaint, please contact us by email at
+									contact@dreamexposure.org.
+								</p>
+								<p><em>Last Updated: October 4, 2018.</em></p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<a href="https://wikijs.dreamexposure.org" target="_blank">Wiki</a>
-			<a href="https://jenkins.dreamexposure.org" target="_blank">Jenkins</a>
-			<a href="https://www.patreon.com/Novafox" target="_blank">Patreon</a>
+		</section>
 
-			<div class="dropdown" id="account-drop">
-				<button class="dropbtn">Account</button>
-				<div class="dropdown-content">
-					<a th:if="${loggedIn}" href="/account">Account</a>
-					<a th:if="${loggedIn}" href="/account/logout">Log out</a>
-					<a th:unless="${loggedIn}" href="/account/register">Register</a>
-					<a th:unless="${loggedIn}" href="/account/login">Log In</a>
-				</div>
+		<footer class="footer text-faded text-center py-5">
+			<div class="container">
+				<p class="m-0 small">
+					<span th:text="'© DreamExposure Studios ' + ${year} + '. All rights reserved.'"></span>
+					<span> | </span>
+					<a href="/policy/privacy">Privacy Policy</a>
+					<span> | </span>
+					<a href="/policy/tos">Terms of Service</a>
+					<span> | </span>
+					<a href="/policy/refund">Refund Policy</a>
+				</p>
 			</div>
-		</div>
+		</footer>
 
-		<div id="content">
-			<h1>Privacy Policy</h1>
-			<p>
-				Personal information collected includes full name, email address, age, credit and/or debit card
-				information, billing address, and/or IP addresses. This information is only collected when needed, such
-				as when registering for an account or purchasing a product via the online web-store provided by
-				DreamExposure.
+		<!-- Bootstrap core JavaScript -->
+		<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-				<br>
-				<br>
-
-				Personal information is never shared or sold to any third parties or services. Personal information is
-				stored on internal services and encrypted. Any credit/debit card information is not stored or accessible
-				by DreamExposure. Billing information is handled directly by the service DreamExposure may utilize for
-				handling billing (SquareUp, Stripe, PayPal, Patreon).
-
-				<br>
-				<br>
-
-				IP Addresses are only collected for debugging purposes and deleted every rolling 24 hour period. In
-				order to debug various API endpoints and pages, IP addresses may be logged. This information is vital to
-				assessing issues within DreamExposure's websites and services.
-
-				<br>
-				<br>
-
-				Passwords for DreamExposure websites are stored in a database and are hashed and salted. Passwords are
-				never stored in plaintext.
-
-				<br>
-				<br>
-
-				Last Updated: July 26, 2018.
-			</p>
-		</div>
 	</body>
-
-	<footer id="footer">
-		<p>
-			<span th:text="'© DreamExposure ' + ${year} + '. All rights reserved.'"></span>
-			<span> | </span>
-			<a href="/policy/privacy">Privacy Policy</a>
-			<span> | </span>
-			<a href="/policy/tos">Terms of Service</a>
-			<span> | </span>
-			<a href="/apply">Jobs</a>
-		</p>
-	</footer>
 </html>

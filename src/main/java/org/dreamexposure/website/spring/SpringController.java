@@ -25,6 +25,20 @@ public class SpringController {
         return "about";
     }
 
+    @RequestMapping("/products")
+    public String products(Map<String, Object> model, HttpServletRequest req) {
+        model.clear();
+        model.putAll(AccountHandler.getHandler().getAccount(req));
+        return "products";
+    }
+
+    @RequestMapping("/store")
+    public String store(Map<String, Object> model, HttpServletRequest req) {
+        model.clear();
+        model.putAll(AccountHandler.getHandler().getAccount(req));
+        return "store";
+    }
+
     @RequestMapping("/contact")
     public String commands(Map<String, Object> model, HttpServletRequest req) {
         model.clear();
@@ -45,6 +59,13 @@ public class SpringController {
         model.clear();
         model.putAll(AccountHandler.getHandler().getAccount(req));
         return "policy/terms";
+    }
+
+    @RequestMapping("/policy/refund")
+    public String refundPolicy(Map<String, Object> model, HttpServletRequest req) {
+        model.clear();
+        model.putAll(AccountHandler.getHandler().getAccount(req));
+        return "policy/refund";
     }
 
     //Plugin Pages
