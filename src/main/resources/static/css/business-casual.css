@@ -177,6 +177,7 @@ p {
 .cta .cta-inner:before {
     border-radius: 0.5rem;
     content: '';
+    pointer-events: none;
     position: absolute;
     top: -0.5rem;
     bottom: -0.5rem;
