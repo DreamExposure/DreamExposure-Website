@@ -91,11 +91,11 @@ public class SpringController {
         return "plugins/perworldchatplus";
     }
 
-    @RequestMapping("/plugins/insane-warps")
+    @RequestMapping("/plugins/insanewarps")
     public String pluginInsaneWarps(Map<String, Object> model, HttpServletRequest req) {
         model.clear();
         model.putAll(AccountHandler.getHandler().getAccount(req));
-        return "plugins/insane-warps";
+        return "plugins/insanewarps";
     }
 
     @RequestMapping("/plugins/novalib")

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<!--Meta Stuffs-->
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+		<meta content="DreamExposure Studios - Envision a new reality" name="description">
+		<meta content="DreamExposure Studios" property="og:title"/>
+		<meta content="https://www.dreamexposure.org" property="og:url"/>
+		<meta content="DreamExposure Studios - Envision a new reality" property="og:description"/>
+		<meta content="/img/logo/Dream_Exposure_Logo_White.jpg" property="og:image">
+
+
+		<!-- ****** faviconit.com favicons ****** -->
+		<link href="/img/favicons/favicon.ico" rel="shortcut icon">
+		<link href="/img/favicons/favicon.ico" rel="icon" sizes="16x16 32x32 64x64">
+		<link href="/img/favicons/favicon-192.png" rel="icon" sizes="196x196" type="image/png">
+		<link href="/img/favicons/favicon-160.png" rel="icon" sizes="160x160" type="image/png">
+		<link href="/img/favicons/favicon-96.png" rel="icon" sizes="96x96" type="image/png">
+		<link href="/img/favicons/favicon-64.png" rel="icon" sizes="64x64" type="image/png">
+		<link href="/img/favicons/favicon-32.png" rel="icon" sizes="32x32" type="image/png">
+		<link href="/img/favicons/favicon-16.png" rel="icon" sizes="16x16" type="image/png">
+		<link href="/img/favicons/favicon-57.png" rel="apple-touch-icon">
+		<link href="/img/favicons/favicon-114.png" rel="apple-touch-icon" sizes="114x114">
+		<link href="/img/favicons/favicon-72.png" rel="apple-touch-icon" sizes="72x72">
+		<link href="/img/favicons/favicon-144.png" rel="apple-touch-icon" sizes="144x144">
+		<link href="/img/favicons/favicon-60.png" rel="apple-touch-icon" sizes="60x60">
+		<link href="/img/favicons/favicon-120.png" rel="apple-touch-icon" sizes="120x120">
+		<link href="/img/favicons/favicon-76.png" rel="apple-touch-icon" sizes="76x76">
+		<link href="/img/favicons/favicon-152.png" rel="apple-touch-icon" sizes="152x152">
+		<link href="/img/favicons/favicon-180.png" rel="apple-touch-icon" sizes="180x180">
+		<meta content="#FFFFFF" name="msapplication-TileColor">
+		<meta content="/img/favicons/favicon-144.png" name="msapplication-TileImage">
+		<meta content="/img/favicons/browserconfig.xml" name="msapplication-config">
+		<!-- ****** faviconit.com favicons ****** -->
+
+		<title>InsaneWarps && DreamExposure</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom fonts for this template -->
+		<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+		      rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="/css/business-casual.css" rel="stylesheet">
+
+		<!--Externally Hosted-->
+		<script crossorigin="anonymous"
+		        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+
+		<h1 class="site-heading text-center text-white d-none d-lg-block">
+			<span class="site-heading-upper text-primary mb-3">Envision a new Reality</span>
+			<span class="site-heading-lower">DreamExposure Studios</span>
+		</h1>
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+			<div class="container">
+				<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Menu</a>
+				<button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+				        class="navbar-toggler"
+				        data-target="#navbarResponsive" data-toggle="collapse" type="button">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav mx-auto">
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="/">Home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="/about">About</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="/products">Products</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="/store">Store</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="https://wikijs.dreamexposure.org"
+							   target="_blank">Wiki</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="https://jenkins.dreamexposure.org"
+							   target="_blank">Jenkins</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="https://patreon.com/NovaFox"
+							   target="_blank">Patreon</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<section class="page-section clearfix">
+			<div class="container">
+				<div class="intro">
+					<img alt="" class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+					     src="/img/plugins/insanewarps/insanewarps.jpg">
+					<div class="intro-text left-0 text-center bg-faded p-5 rounded">
+						<h2 class="section-heading mb-4">
+							<span class="section-heading-upper">Better Handling of Teleports</span>
+							<span class="section-heading-lower">InsaneWarps</span>
+						</h2>
+						<p class="mb-3">
+							InsaneWarps introduces better handling of warps, spawns, tpr and more with new unique
+							mechanics. Locations can easily be set and controlled with permissions and delays. Signs can
+							be used for quick commandless teleports. And add more immersive features like a GTA 5 style
+							teleportation!
+						</p>
+						<div class="intro-button mx-auto">
+							<!--TODO: Add download link-->
+							<a class="btn btn-primary btn-xl" href="#">Download Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section cta">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 mx-auto">
+						<div class="cta-inner text-center rounded">
+							<h2 class="section-heading mb-4">
+								<span class="section-heading-upper">Quick and Simple</span>
+								<span class="section-heading-lower">Installation</span>
+							</h2>
+							<p class="mb-0">Simply download the latest version of InsaneWarps and drop it into your
+								plugins folder. Restart the server and everything is ready to go with no configuration
+								needed! If you want to integrate economy with InsaneWarps, you will need to download and
+								install Vault.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section cta">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 mx-auto">
+						<div class="cta-inner text-center rounded">
+							<h2 class="section-heading mb-4">
+								<span class="section-heading-upper">Syntax, Examples, and Permissions</span>
+								<span class="section-heading-lower">Commands</span>
+							</h2>
+							<div class="table-responsive">
+								<table class="table table-striped">
+									<thead class="thead-dark">
+									<tr>
+										<th scope="col">Command Syntax</th>
+										<th scope="col">Example</th>
+										<th scope="col">Description</th>
+										<th scope="col">Permission</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td scope="row">/setwarp [name]</td>
+										<td>/setwarp shop</td>
+										<td>Sets a new warp with the specified name</td>
+										<td>iw.warp.setwarp</td>
+									</tr>
+									<tr>
+										<td scope="row">/delwarp [name]</td>
+										<td>/delwarp shop</td>
+										<td>Deletes the specified warp</td>
+										<td>iw.warp.delwarp</td>
+									</tr>
+									<tr>
+										<td scope="row">/warp (name)</td>
+										<td>/warp shop</td>
+										<td>Teleports you to the warp</td>
+										<td>iw.warp.* OR iw.warp.[name]</td>
+									</tr>
+									<tr>
+										<td scope="row">/sethub [name]</td>
+										<td>/sethub shop</td>
+										<td>Sets a new hub with the specified name</td>
+										<td>iw.hub.sethub</td>
+									</tr>
+									<tr>
+										<td scope="row">/delhub [name]</td>
+										<td>/delhub shop</td>
+										<td>Deletes the specified hub</td>
+										<td>iw.hub.delhub</td>
+									</tr>
+									<tr>
+										<td scope="row">/hub (name)</td>
+										<td>/hub shop</td>
+										<td>Teleports you to the hub</td>
+										<td>iw.hub.* OR iw.hub.[name]</td>
+									</tr>
+									<tr>
+										<td scope="row">/setlobby [name]</td>
+										<td>/setlobby shop</td>
+										<td>Sets a new lobby with the specified name</td>
+										<td>iw.lobby.setlobby</td>
+									</tr>
+									<tr>
+										<td scope="row">/dellobby [name]</td>
+										<td>/dellobby shop</td>
+										<td>Deletes the specified lobby</td>
+										<td>iw.lobby.dellobby</td>
+									</tr>
+									<tr>
+										<td scope="row">/lobby (name)</td>
+										<td>/lobby shop</td>
+										<td>Teleports you to the lobby</td>
+										<td>iw.lobby.* OR iw.lobby.[name]</td>
+									</tr>
+									<tr>
+										<td scope="row">/setspawn</td>
+										<td>/setspawn</td>
+										<td>Sets the spawn point for the world</td>
+										<td>iw.spawn.setspawn</td>
+									</tr>
+									<tr>
+										<td scope="row">/delspawn [world]</td>
+										<td>/dellobby world</td>
+										<td>Deletes the specified world's spawn point</td>
+										<td>iw.spawn.delspawn</td>
+									</tr>
+									<tr>
+										<td scope="row">/spawn (world)</td>
+										<td>/spawn world</td>
+										<td>Teleports you to the world's spawn point</td>
+										<td>iw.spawn.* or iw.spawn.[world]</td>
+									</tr>
+									<tr>
+										<td scope="row">/tpr</td>
+										<td>/tpr</td>
+										<td>Teleports you to a random location within the world</td>
+										<td>iw.tpr.use</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section cta">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 mx-auto">
+						<div class="cta-inner text-center rounded">
+							<h2 class="section-heading mb-4">
+								<span class="section-heading-upper">Description and Defaults</span>
+								<span class="section-heading-lower">Permissions</span>
+							</h2>
+							<div class="table-responsive">
+								<table class="table table-striped">
+									<thead class="thead-dark">
+									<tr>
+										<th scope="col">Permission</th>
+										<th scope="col">Description</th>
+										<th scope="col">Default</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td scope="row">iw.econ.bypass</td>
+										<td>Allows the player to bypass the cost of a teleport</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.sign.place</td>
+										<td>Allows placing of InsaneWarp signs</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.warp.ignoredelay</td>
+										<td>Allows the player to bypass warp delay</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.warp.setwarp</td>
+										<td>Allows the player to set a new warp location</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.warp.delwarp</td>
+										<td>Allows the player to delete a warp location</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.hub.ignoredelay</td>
+										<td>Allows the player to bypass hub delay</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.hub.sethub</td>
+										<td>Allows the player to set a new hub location</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.hub.delhub</td>
+										<td>Allows the player to delete a hub location</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.lobby.ignoredelay</td>
+										<td>Allows the player to bypass lobby delay</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.lobby.setlobby</td>
+										<td>Allows the player to set a new lobby location</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.lobby.delete</td>
+										<td>Allows the player to delete a lobby location</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.spawn.ignoredelay</td>
+										<td>Allows the player to bypass spawn delay</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.spawn.setspawn</td>
+										<td>Allows the player to set a new spawn location</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.spawn.delspawn</td>
+										<td>Allows the player to delete a spawn location</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.tpr.use</td>
+										<td>Allows the player to use the tpr command</td>
+										<td>true</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.tpr.ignoredelay</td>
+										<td>Allows the player to bypass tpr delay</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.tpr.ignorecooldown</td>
+										<td>Allows the player to bypass tpr cooldown</td>
+										<td>op</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section cta">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 mx-auto">
+						<div class="cta-inner text-center rounded">
+							<h2 class="section-heading mb-4">
+								<span class="section-heading-upper">Understandable and simple</span>
+								<span class="section-heading-lower">Config</span>
+							</h2>
+							<p class="mb-0">
+								The config.yml is simple to understand and setup. Its default values are set to balance
+								existing mechanics with new ones.
+							</p>
+							<hr>
+							<pre style="text-align: left;"><code>
+#Don't change this, we use this for handling config changes
+Config Version: 1.0
+#Update settings
+Updates:
+  Check: true
+  Download: false
+#Console settings for debugging.
+Console:
+  Debug: false
+  Verbose: false
+#Language. currently only "EN_US" is supported.
+Language: EN_US
+Economy:
+  #Whether or not to use economy at all
+  Enabled: false
+  #Whther or not to allow users with the permission to bypass teleport costs
+  Use Bypass Permission: true
+#Warp settings. This is exactly the same for hubs, lobbies, and spawns.
+Warp:
+  Delay:
+    Enabled: false
+	Seconds: 5
+Hub:
+  Delay:
+    Enabled: false
+	Seconds: 5
+Lobby:
+  Delay:
+    Enabled: false
+	Seconds: 5
+Spawn:
+  Delay:
+	Enabled: false
+	Seconds: 5
+#Respawn settings
+Respawn:
+  #Whether or not InsaneWarps should handle respawn events.
+  Handle: true
+#TPR (Teleport Random) settings
+TPR:
+  Enabled: true
+  Delay:
+	Enabled: false
+	Seconds: 5
+  # Cooldown settings to prevent abuse
+  Cooldown:
+	Enabled: true
+	#Default cooldown is 1 hour
+	Seconds: 3600
+  Cost: 0.0
+  #The max distance to teleport the player from the current location
+  Max Distance: 1000
+  #The list of worlds TPR is enabled in.
+  Worlds:
+   - world
+#Teleport mechanics settings
+Teleport:
+  #GTA Style teleport settings
+  GTA Style:
+	Enabled: false
+	#How many stages there are. GTA 5 has 3.
+	Drops Up: 3
+	#Y coordinate height to go to.
+	Target Y: 150
+	#Delay in seconds for each stage.
+	Drop Delay: 1
+	#Delay in seconds for each stage down.
+	Down Delay: 1
+	#The sound played for each stage.
+	Sound:
+      #The sound for 1.8 servers (as the API changed after 1.8)
+      1_8: ORB_PICKUP
+      #The sound for servers above 1.8 (as the API changed after 1.8)
+      1_9-1_12: ENTITY_EXPERIENCE_ORB_PICKUP
+							</code></pre>
+							<hr>
+							<p class="mb-0">
+								For the world shares, a very simple format is used.
+							</p>
+							<hr>
+							<pre style="text-align: left;"><code>
+#default values
+world_nether: world
+world_the_end: world
+
+#A very simple format example:
+world_name_from: world_name_to
+							</code></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section">
+			<div class="container">
+				<div class="product-item">
+					<div class="product-item-title d-flex">
+						<div class="bg-faded p-5 d-flex mr-auto rounded">
+							<h2 class="section-heading mb-0">
+								<span class="section-heading-upper">Immersive and Commandless</span>
+								<span class="section-heading-lower">Signs</span>
+							</h2>
+						</div>
+					</div>
+					<img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+					     src="/img/plugins/insanewarps/iw-sign-format.jpg" alt="">
+					<div class="product-item-description d-flex ml-auto">
+						<div class="bg-faded p-5 rounded">
+							<p class="mb-0">
+								InsaneWarps offers signs for more immersive use rather than commands.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section cta">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 mx-auto">
+						<div class="cta-inner text-center rounded">
+							<h2 class="section-heading mb-4">
+								<span class="section-heading-upper">Active Development</span>
+								<span class="section-heading-lower">Upcoming Features</span>
+							</h2>
+							<ul style="text-align: left;">
+								<li>Inventory Menus</li>
+								<li>Teleport blocks (like signs, but cool looking blocks)</li>
+								<li>Multi-block structures to create immersive teleporters</li>
+								<li>Teleport others</li>
+								<li>Commands from the console</li>
+								<li>Particle Effects</li>
+								<li>And more!</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer text-faded text-center py-5">
+			<div class="container">
+				<p class="m-0 small">
+					<span th:text="'© DreamExposure Studios ' + ${year} + '. All rights reserved.'"></span>
+					<span> | </span>
+					<a href="/policy/privacy">Privacy Policy</a>
+					<span> | </span>
+					<a href="/policy/tos">Terms of Service</a>
+					<span> | </span>
+					<a href="/policy/refund">Refund Policy</a>
+				</p>
+			</div>
+		</footer>
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	</body>
+</html>
