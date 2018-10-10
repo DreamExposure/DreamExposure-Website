@@ -1,0 +1,20 @@
+.g-recaptcha {
+    display: inline-block;
+    width: 100%;
+}
+
+.form-hideable {
+    display: none;
+}
+
+.form-hideable.show {
+    display: inherit;
+}
+
+label {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
