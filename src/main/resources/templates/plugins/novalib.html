@@ -1,104 +1,223 @@
-<!DOCTYPE HTML>
-<!--suppress HtmlUnknownTarget -->
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 	<head>
-		<!--Meta stuffs-->
+		<!--Meta Stuffs-->
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="DreamExposure - Envision a new reality">
-		<meta property="og:title" content="DreamExposure"/>
-		<meta property="og:url" content="https://www.dreamexposure.org"/>
-		<meta property="og:description" content="DreamExposure - Envision a new reality"/>
-		<meta property="og:image" content="/assets/images/logo/Dream_Exposure_Logo_White.jpg">
+		<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+		<meta content="DreamExposure Studios - Envision a new reality" name="description">
+		<meta content="DreamExposure Studios" property="og:title"/>
+		<meta content="https://www.dreamexposure.org" property="og:url"/>
+		<meta content="DreamExposure Studios - Envision a new reality" property="og:description"/>
+		<meta content="/img/logo/Dream_Exposure_Logo_White.jpg" property="og:image">
+
 
 		<!-- ****** faviconit.com favicons ****** -->
-		<link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
-		<link rel="icon" sizes="16x16 32x32 64x64" href="/assets/images/favicons/favicon.ico">
-		<link rel="icon" type="image/png" sizes="196x196" href="/assets/images/favicons/favicon-192.png">
-		<link rel="icon" type="image/png" sizes="160x160" href="/assets/images/favicons/favicon-160.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicons/favicon-96.png">
-		<link rel="icon" type="image/png" sizes="64x64" href="/assets/images/favicons/favicon-64.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16.png">
-		<link rel="apple-touch-icon" href="/assets/images/favicons/favicon-57.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicons/favicon-114.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicons/favicon-72.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicons/favicon-144.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/favicon-60.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicons/favicon-120.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicons/favicon-76.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicons/favicon-152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/favicon-180.png">
-		<meta name="msapplication-TileColor" content="#FFFFFF">
-		<meta name="msapplication-TileImage" content="/assets/images/favicons/favicon-144.png">
-		<meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+		<link href="/img/favicons/favicon.ico" rel="shortcut icon">
+		<link href="/img/favicons/favicon.ico" rel="icon" sizes="16x16 32x32 64x64">
+		<link href="/img/favicons/favicon-192.png" rel="icon" sizes="196x196" type="image/png">
+		<link href="/img/favicons/favicon-160.png" rel="icon" sizes="160x160" type="image/png">
+		<link href="/img/favicons/favicon-96.png" rel="icon" sizes="96x96" type="image/png">
+		<link href="/img/favicons/favicon-64.png" rel="icon" sizes="64x64" type="image/png">
+		<link href="/img/favicons/favicon-32.png" rel="icon" sizes="32x32" type="image/png">
+		<link href="/img/favicons/favicon-16.png" rel="icon" sizes="16x16" type="image/png">
+		<link href="/img/favicons/favicon-57.png" rel="apple-touch-icon">
+		<link href="/img/favicons/favicon-114.png" rel="apple-touch-icon" sizes="114x114">
+		<link href="/img/favicons/favicon-72.png" rel="apple-touch-icon" sizes="72x72">
+		<link href="/img/favicons/favicon-144.png" rel="apple-touch-icon" sizes="144x144">
+		<link href="/img/favicons/favicon-60.png" rel="apple-touch-icon" sizes="60x60">
+		<link href="/img/favicons/favicon-120.png" rel="apple-touch-icon" sizes="120x120">
+		<link href="/img/favicons/favicon-76.png" rel="apple-touch-icon" sizes="76x76">
+		<link href="/img/favicons/favicon-152.png" rel="apple-touch-icon" sizes="152x152">
+		<link href="/img/favicons/favicon-180.png" rel="apple-touch-icon" sizes="180x180">
+		<meta content="#FFFFFF" name="msapplication-TileColor">
+		<meta content="/img/favicons/favicon-144.png" name="msapplication-TileImage">
+		<meta content="/img/favicons/browserconfig.xml" name="msapplication-config">
 		<!-- ****** faviconit.com favicons ****** -->
 
 		<title>NovaLib && DreamExposure</title>
 
-		<!--Locally Hosted Files-->
-		<link rel="stylesheet" href="/styles/global.css">
+		<!-- Bootstrap core CSS -->
+		<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-		<!--Externally Hosted Files-->
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-		<script>initHighlightingOnLoad()</script>
+		<!-- Custom fonts for this template -->
+		<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+		      rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="/css/business-casual.css" rel="stylesheet">
+
+		<!--Externally Hosted-->
+		<script crossorigin="anonymous"
+		        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 
 	<body>
-		<div class="top-nav">
-			<a href="/" class="title"><h1>DreamExposure</h1></a>
-			<a href="/about">About</a>
-			<a href="/contact">Contact</a>
-			<div class="dropdown">
-				<button class="dropbtn">Plugins</button>
-				<div class="dropdown-content">
-					<a href="/plugins/perworldchatplus">PerWorldChatPlus</a>
-					<a href="/plugins/insane-warps">InsaneWarps</a>
-					<a class="active" href="/plugins/novalib">NovaLib</a>
-				</div>
-			</div>
-			<div class="dropdown">
-				<button class="dropbtn">Discord Bots</button>
-				<div class="dropdown-content">
-					<a href="https://www.discalbot.com" target="_blank">DisCal</a>
-					<a href="https://ticketbird.novamaday.com" target="_blank">TicketBird</a>
-				</div>
-			</div>
-			<a href="https://wikijs.dreamexposure.org" target="_blank">Wiki</a>
-			<a href="https://jenkins.dreamexposure.org" target="_blank">Jenkins</a>
-			<a href="https://www.patreon.com/Novafox" target="_blank">Patreon</a>
 
-			<div class="dropdown" id="account-drop">
-				<button class="dropbtn">Account</button>
-				<div class="dropdown-content">
-					<a th:if="${loggedIn}" href="/account">Account</a>
-					<a th:if="${loggedIn}" href="/account/logout">Log out</a>
-					<a th:unless="${loggedIn}" href="/account/register">Register</a>
-					<a th:unless="${loggedIn}" href="/account/login">Log In</a>
+		<h1 class="site-heading text-center text-white d-none d-lg-block">
+			<span class="site-heading-upper text-primary mb-3">Envision a new Reality</span>
+			<span class="site-heading-lower">DreamExposure Studios</span>
+		</h1>
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+			<div class="container">
+				<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Menu</a>
+				<button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+				        class="navbar-toggler"
+				        data-target="#navbarResponsive" data-toggle="collapse" type="button">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav mx-auto">
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="/">Home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="/about">About</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="/products">Products</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="/store">Store</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="https://wikijs.dreamexposure.org"
+							   target="_blank">Wiki</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="https://jenkins.dreamexposure.org"
+							   target="_blank">Jenkins</a>
+						</li>
+						<li class="nav-item px-lg-4">
+							<a class="nav-link text-uppercase text-expanded" href="https://patreon.com/NovaFox"
+							   target="_blank">Patreon</a>
+						</li>
+					</ul>
 				</div>
 			</div>
-		</div>
+		</nav>
 
-		<div id="content">
-			<h1>NovaLib</h1>
-			<p>Hey all! This page is a work in progress. For current information, visit the Wiki page for NovaLib!
-			</p>
-			<a href="https://wiki.novamaday.com/plugins/novalib/start">
-				<button>Wiki</button>
-			</a>
-		</div>
+		<section class="page-section clearfix">
+			<div class="container">
+				<div class="intro">
+					<img alt="" class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+					     src="/img/plugins/novalib/novalib.jpg">
+					<div class="intro-text left-0 text-center bg-faded p-5 rounded">
+						<h2 class="section-heading mb-4">
+							<span class="section-heading-upper">The All in One API Solution</span>
+							<span class="section-heading-lower">NovaLib</span>
+						</h2>
+						<p class="mb-3">
+							NovaLib introduces a new way for plugins to be developed. Rather than relying on several
+							different APIs and libraries, plugins can now reference just one. This not only makes it
+							easier for developers, but also means server owners need to maintain fewer plugins and thus
+							less time is spent getting updates for every API plugin out there.
+						</p>
+						<div class="intro-button mx-auto">
+							<a class="btn btn-primary btn-xl" href="https://jenkins.dreamexposure.org/job/NovaLib/"
+							   target="_blank">Download Now</a>
+							<a class="btn btn-primary btn-xl"
+							   href="https://wikijs.dreamexposure.org/plugins/novalib/start" target="_blank">Wiki</a>
+							<a class="btn btn-primary btn-xl" href="https://docs.dreamexposure.org/plugins/novalib/"
+							   target="_blank">Javadoc</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section cta">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 mx-auto">
+						<div class="cta-inner text-center rounded">
+							<h2 class="section-heading mb-4">
+								<span class="section-heading-upper">Powerful And Robust</span>
+								<span class="section-heading-lower">Current Features</span>
+							</h2>
+							<ul style="text-align: left;">
+								<li>NMS packet handling so you don't have to touch NMS code.</li>
+								<li>CustomConfig object to easily handle custom configs/files for you</li>
+								<li>Database API for easy connections to MySQL databases.</li>
+								<li>File/folder utilities for convenience.</li>
+								<li>Custom entity handling (Work inProgress).</li>
+								<li>EXP Timers.</li>
+								<li>Easy and simple communicate between Servers in a Bungeecord network.</li>
+								<li>Command API for simplifying the way you make commands (and simplifying complex
+									commands)
+								</li>
+								<li>And more!</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section cta">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 mx-auto">
+						<div class="cta-inner text-center rounded">
+							<h2 class="section-heading mb-4">
+								<span class="section-heading-upper">Quick and Simple</span>
+								<span class="section-heading-lower">Installation</span>
+							</h2>
+							<p class="mb-0">Just download the .jar file for your server (either Spigot/Bukkit or Bungee)
+								and drop it into the plugins folder. Restart the server and you are all set!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section cta">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 mx-auto">
+						<div class="cta-inner text-center rounded">
+							<h2 class="section-heading mb-4">
+								<span class="section-heading-upper">Active Development</span>
+								<span class="section-heading-lower">Upcoming Features</span>
+							</h2>
+							<ul style="text-align: left;">
+								<li>SQLite support</li>
+								<li>Full and robust minigames API built in (Work in Progress)</li>
+								<li>Further handling of even more NMS code for you</li>
+								<li>Custom Entity handling/API (Work in Progress)</li>
+								<li>Commands from the console</li>
+								<li>Particle Effect Handler</li>
+								<li>And more!</li>
+								<li>Don't see a feature you want? DM me or open a ticket and I will add it in!</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer text-faded text-center py-5">
+			<div class="container">
+				<p class="m-0 small">
+					<span th:text="'© DreamExposure Studios ' + ${year} + '. All rights reserved.'"></span>
+					<span> | </span>
+					<a href="/policy/privacy">Privacy Policy</a>
+					<span> | </span>
+					<a href="/policy/tos">Terms of Service</a>
+					<span> | </span>
+					<a href="/policy/refund">Refund Policy</a>
+				</p>
+			</div>
+		</footer>
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 	</body>
-
-	<footer id="footer">
-		<p>
-			<span th:text="'© DreamExposure ' + ${year} + '. All rights reserved.'"></span>
-			<span> | </span>
-			<a href="/policy/privacy">Privacy Policy</a>
-			<span> | </span>
-			<a href="/policy/tos">Terms of Service</a>
-			<span> | </span>
-			<a href="/apply">Jobs</a>
-		</p>
-	</footer>
 </html>
