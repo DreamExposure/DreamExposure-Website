@@ -48,6 +48,8 @@
 		<!-- Custom styles for this template -->
 		<link href="/css/business-casual.css" rel="stylesheet">
 
+		<script src="/scripts/scroll.js"></script>
+
 		<!--Externally Hosted-->
 		<script crossorigin="anonymous"
 		        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -106,11 +108,11 @@
 			</div>
 		</nav>
 
-		<section class="page-section clearfix">
+		<section class="page-section clearfix" id="top">
 			<div class="container">
 				<div class="intro">
 					<img alt="" class="intro-img img-fluid mb-3 mb-lg-0 rounded"
-					     src="/img/plugins/insanewarps/insanewarps.jpg">
+					     src="/img/plugins/insanewarps/IW-GTA-V-Teleportation.gif">
 					<div class="intro-text left-0 text-center bg-faded p-5 rounded">
 						<h2 class="section-heading mb-4">
 							<span class="section-heading-upper">Better Handling of Teleports</span>
@@ -131,7 +133,86 @@
 			</div>
 		</section>
 
-		<section class="page-section cta">
+		<section class="page-section cta" id="jump">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 mx-auto">
+						<div class="cta-inner text-center rounded">
+							<h2 class="section-heading mb-4">
+								<span class="section-heading-lower">Jump</span>
+							</h2>
+							<p>
+								<button class="btn btn-secondary btn-sm btn-margin-small"
+								        onclick="doScrolling('features')">Features
+								</button>
+								<button class="btn btn-secondary btn-sm btn-margin-small"
+								        onclick="doScrolling('install')">Installation
+								</button>
+								<button class="btn btn-secondary btn-sm btn-margin-small"
+								        onclick="doScrolling('commands')">Commands
+								</button>
+								<button class="btn btn-secondary btn-sm btn-margin-small"
+								        onclick="doScrolling('permissions')">Permissions
+								</button>
+								<button class="btn btn-secondary btn-sm btn-margin-small"
+								        onclick="doScrolling('config')">Configuration
+								</button>
+								<button class="btn btn-secondary btn-sm btn-margin-small"
+								        onclick="doScrolling('signs')">Signs
+								</button>
+								<button class="btn btn-secondary btn-sm btn-margin-small"
+								        onclick="doScrolling('upcoming')">Upcoming Features
+								</button>
+								<button class="btn btn-secondary btn-sm btn-margin-small"
+								        onclick="doScrolling('structures')">Structures
+								</button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section cta" id="features">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 mx-auto">
+						<div class="cta-inner text-center rounded">
+							<h2 class="section-heading mb-4">
+								<span class="section-heading-upper">Extensive and Powerful</span>
+								<span class="section-heading-lower">Features</span>
+							</h2>
+							<ul style="text-align: left;">
+								<li>Warp/Hub/Lobby/Spawn handling</li>
+								<li>Respawn handling</li>
+								<li>Spawn sharing (Die in the Nether, respawn in the Overworld)</li>
+								<li>TPR (Randomly teleport to a location far away)</li>
+								<li>Teleportation Upon Join (force a player to teleport to the spawn or other locations
+									when they join the server)
+								</li>
+								<li>Multiblock structures
+									<ul>
+										<li>Portal (Step into a portal and teleport)</li>
+										<li>Platform (Stand or crouch on a platform to teleport)</li>
+										<li>ItemBlock (Floating item above a block to represent the location, right
+											click the sign to teleport)
+										</li>
+									</ul>
+								</li>
+								<li>Holograms for multiblock structures</li>
+								<li>Teleport signs</li>
+								<li>GTA V teleportation animation</li>
+								<li>Economy integration</li>
+								<li>And more! Don't see a feature? Request it on our discord!</li>
+							</ul>
+							<button class="btn btn-secondary btn-sm" onclick="doScrolling('top')">Top</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section cta" id="install">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-9 mx-auto">
@@ -144,13 +225,22 @@
 								plugins folder. Restart the server and everything is ready to go with no configuration
 								needed! If you want to integrate economy with InsaneWarps, you will need to download and
 								install Vault.</p>
+							<hr>
+							<p>
+								InsaneWarps depends on <a href="https://jenkins.dreamexposure.org/job/NovaLib/"
+								                          target="_blank">NovaLib</a>
+								<br>
+								Download and install <a href="https://www.spigotmc.org/resources/vault.34315/"
+								                        target="_blank">Vault</a> if you want economy integration
+							</p>
+							<button class="btn btn-secondary btn-sm" onclick="doScrolling('top')">Top</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="page-section cta">
+		<section class="page-section cta" id="commands">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-9 mx-auto">
@@ -250,6 +340,7 @@
 									</tr>
 									</tbody>
 								</table>
+								<button class="btn btn-secondary btn-sm" onclick="doScrolling('top')">Top</button>
 							</div>
 						</div>
 					</div>
@@ -257,7 +348,7 @@
 			</div>
 		</section>
 
-		<section class="page-section cta">
+		<section class="page-section cta" id="permissions">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-9 mx-auto">
@@ -279,6 +370,11 @@
 									<tr>
 										<td scope="row">iw.econ.bypass</td>
 										<td>Allows the player to bypass the cost of a teleport</td>
+										<td>op</td>
+									</tr>
+									<tr>
+										<td scope="row">iw.join.bypass</td>
+										<td>Allows the player to bypass teleportation upon join.</td>
 										<td>op</td>
 									</tr>
 									<tr>
@@ -363,6 +459,7 @@
 									</tr>
 									</tbody>
 								</table>
+								<button class="btn btn-secondary btn-sm" onclick="doScrolling('top')">Top</button>
 							</div>
 						</div>
 					</div>
@@ -370,7 +467,7 @@
 			</div>
 		</section>
 
-		<section class="page-section cta">
+		<section class="page-section cta" id="config">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-9 mx-auto">
@@ -385,80 +482,115 @@
 							</p>
 							<hr>
 							<pre style="text-align: left;"><code>
-#Don't change this, we use this for handling config changes
-Config Version: 1.0
-#Update settings
+DO NOT DELETE:
+  A: InsaneWarps is developed and managed by DreamExposure
+  B: Replicating or sharing this plugin without our approval will result in legal
+    action
+# Whether or not to check for updates and/or download the update
 Updates:
   Check: true
   Download: false
-#Console settings for debugging.
+# Used for extra debug info in the console. Use this to help figure out any issues
 Console:
   Debug: false
   Verbose: false
-#Language. currently only "EN_US" is supported.
+# Select the language (currently only English is supported)
 Language: EN_US
 Economy:
-  #Whether or not to use economy at all
+  # Whether or not to enable econ settings.
   Enabled: false
-  #Whther or not to allow users with the permission to bypass teleport costs
+  # Whether or not to allow users with econ bypass to bypass the economy costs
   Use Bypass Permission: true
-#Warp settings. This is exactly the same for hubs, lobbies, and spawns.
+# Settings for teleportation upon join
+Join:
+  Teleport:
+    Enabled: false
+    Type: SPAWN
+    LocName: world
+	# Whether or not to allow users with join bypass to bypass the teleportation
+    AllowBypass: true
 Warp:
   Delay:
     Enabled: false
-	Seconds: 5
+    Seconds: 5
 Hub:
   Delay:
     Enabled: false
-	Seconds: 5
+    Seconds: 5
 Lobby:
   Delay:
     Enabled: false
-	Seconds: 5
+    Seconds: 5
 Spawn:
   Delay:
-	Enabled: false
-	Seconds: 5
-#Respawn settings
+    Enabled: false
+    Seconds: 5
 Respawn:
-  #Whether or not InsaneWarps should handle respawn events.
   Handle: true
-#TPR (Teleport Random) settings
 TPR:
   Enabled: true
   Delay:
-	Enabled: false
-	Seconds: 5
-  # Cooldown settings to prevent abuse
+    Enabled: false
+    Seconds: 5
   Cooldown:
-	Enabled: true
-	#Default cooldown is 1 hour
-	Seconds: 3600
+    Enabled: true
+    Seconds: 3600
   Cost: 0.0
-  #The max distance to teleport the player from the current location
+  # Max distance, in blocks, that the player may be teleported
   Max Distance: 1000
-  #The list of worlds TPR is enabled in.
+  # Worlds where tpr can be used.
   Worlds:
-   - world
-#Teleport mechanics settings
+  - world
+# Teleport mechanics settings
 Teleport:
-  #GTA Style teleport settings
   GTA Style:
-	Enabled: false
-	#How many stages there are. GTA 5 has 3.
-	Drops Up: 3
-	#Y coordinate height to go to.
-	Target Y: 150
-	#Delay in seconds for each stage.
-	Drop Delay: 1
-	#Delay in seconds for each stage down.
-	Down Delay: 1
-	#The sound played for each stage.
-	Sound:
-      #The sound for 1.8 servers (as the API changed after 1.8)
-      1_8: ORB_PICKUP
-      #The sound for servers above 1.8 (as the API changed after 1.8)
-      1_9-1_12: ENTITY_EXPERIENCE_ORB_PICKUP
+    Enabled: true
+	# How many stages there are. GTA 5 has 3.
+    Drops Up: 3
+	# Y coordinate height to go to.
+    Target Y: 150
+	# Delay in seconds for each stage.
+    Drop Delay: 1
+	# Delay in seconds for each stage down.
+    Down Delay: 1
+	# The sound played for each stage.
+    Sound: ENTITY_EXPERIENCE_ORB_PICKUP
+# Multiblock structure settings
+Structure:
+  PORTAL:
+	# Allow portals
+    Enabled: true
+	# Base of portal where sign is displayed
+    Base: SEA_LANTERN
+	# Portal frame
+    Frame: BLACK_CONCRETE
+    Portal:
+	  # If the inside of the portal is a nether portal
+      NetherPortal: true
+	  # If the inside of the portal is water (if both false, its air)
+      Water: false
+  PLATFORM:
+    Enabled: true
+    Base: SEA_LANTERN
+    Center: LAPIS_BLOCK
+    Sides: BLACK_CONCRETE
+    Corners: GLOWSTONE
+    Hologram:
+      Enabled: true
+      Text:
+        WithCrouch: '&6Crouch here to teleport!'
+        NoCrouch: '&6Stand here to teleport!'
+	# Whether or not to make players crouch to teleport
+    Crouch:
+      Require: true
+  ITEM_BLOCK:
+    Enabled: true
+    Base: SEA_LANTERN
+	# Show floating item above base block.
+    ShowItem: true
+    Hologram:
+      Enabled: true
+      Text: '&6Click sign to teleport!'
 							</code></pre>
 							<hr>
 							<p class="mb-0">
@@ -473,13 +605,15 @@ world_the_end: world
 #A very simple format example:
 world_name_from: world_name_to
 							</code></pre>
+							<hr>
+							<button class="btn btn-secondary btn-sm" onclick="doScrolling('top')">Top</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="page-section">
+		<section class="page-section" id="signs">
 			<div class="container">
 				<div class="product-item">
 					<div class="product-item-title d-flex">
@@ -497,13 +631,66 @@ world_name_from: world_name_to
 							<p class="mb-0">
 								InsaneWarps offers signs for more immersive use rather than commands.
 							</p>
+							<button class="btn btn-secondary btn-sm" onclick="doScrolling('top')">Top</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="page-section cta">
+		<section class="page-section" id="structures">
+			<div class="container">
+				<div class="product-item">
+					<div class="product-item-title d-flex">
+						<div class="bg-faded p-5 d-flex mr-auto rounded">
+							<h2 class="section-heading mb-0">
+								<span class="section-heading-upper">Immersive and Commandless</span>
+								<span class="section-heading-lower">Structures</span>
+							</h2>
+						</div>
+					</div>
+					<img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+					     src="/img/plugins/insanewarps/multiblock-structures.jpg" alt="">
+					<div class="product-item-description d-flex ml-auto">
+						<div class="bg-faded p-5 rounded">
+							<p class="mb-0">
+								InsaneWarps offers multiblock structures for more immersive use rather than commands or
+								signs.
+							</p>
+							<hr>
+							<p>
+								Portals
+								<br>
+								--
+								<br>
+								Use a portal for teleporting
+
+							</p>
+							<hr>
+							<p>
+								Platform
+								<br>
+								--
+								<br>
+								Stand or crouch on the platform to teleport
+							</p>
+							<hr>
+							<p>
+								ItemBlocks
+								<br>
+								--
+								<br>
+								Have an item float above the base block to represent the location. Then click the sign
+								to teleport.
+							</p>
+							<button class="btn btn-secondary btn-sm" onclick="doScrolling('top')">Top</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section cta" id="upcoming">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-9 mx-auto">
@@ -514,13 +701,11 @@ world_name_from: world_name_to
 							</h2>
 							<ul style="text-align: left;">
 								<li>Inventory Menus</li>
-								<li>Teleport blocks (like signs, but cool looking blocks)</li>
-								<li>Multi-block structures to create immersive teleporters</li>
-								<li>Teleport others</li>
-								<li>Commands from the console</li>
 								<li>Particle Effects</li>
-								<li>And more!</li>
+								<li>Integrated support for Bungee networks (transfer servers seamlessly)</li>
+								<li>And more! Don't see a feature? Request it on our discord!</li>
 							</ul>
+							<button class="btn btn-secondary btn-sm" onclick="doScrolling('top')">Top</button>
 						</div>
 					</div>
 				</div>
