@@ -3,7 +3,7 @@ package org.dreamexposure.website.objects;
 import java.util.Properties;
 
 public enum SiteSettings {
-    SQL_HOST, SQL_USER, SQL_PASSWORD, SQL_DB, SQL_PORT, SQL_PREFIX, TIME_OUT, PORT, LOG_FOLDER, RECAP_KEY, SMTP_HOST, SMTP_PORT, EMAIL_USER, EMAIL_PASS;
+    PORT;
 
     private String val;
 

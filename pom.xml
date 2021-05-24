@@ -6,7 +6,7 @@
 
     <groupId>org.dreamexposure</groupId>
     <artifactId>DreamExposure-Website</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -31,11 +31,11 @@
     <repositories>
         <repository>
             <id>nova-public</id>
-            <url>http://repo.novafox161.com/repository/nova-public/</url>
+            <url>https://repo.novafox161.com/repository/nova-public/</url>
         </repository>
         <repository>
             <id>jcenter</id>
-            <url>http://jcenter.bintray.com</url>
+            <url>https://jcenter.bintray.com</url>
         </repository>
         <repository>
             <id>jitpack.io</id>
@@ -62,18 +62,6 @@
             <version>1.0.0-SNAPSHOT</version>
             <type>jar</type>
             <scope>compile</scope>
-        </dependency>
-        <!--MySQL Driver-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>LATEST</version>
-        </dependency>
-        <!--JSON-->
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20140107</version>
         </dependency>
         <!--Thymeleaf-->
         <dependency>
@@ -112,18 +100,6 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
             <version>5.0.7.RELEASE</version>
-        </dependency>
-        <!--Google ReCAPTCHA Wrapper-->
-        <dependency>
-            <groupId>de.triology.recaptchav2-java</groupId>
-            <artifactId>recaptchav2-java</artifactId>
-            <version>1.0.2</version>
-        </dependency>
-        <!--Simple Java Mail-->
-        <dependency>
-            <groupId>org.simplejavamail</groupId>
-            <artifactId>simple-java-mail</artifactId>
-            <version>5.0.3</version>
         </dependency>
     </dependencies>
 
