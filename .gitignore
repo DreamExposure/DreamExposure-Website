@@ -49,3 +49,5 @@ fabric.properties
 **/*.iml
 **/META-INF/
 **/dependency-reduced-pom.xml
+/.gradle/
+/build/

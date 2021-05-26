@@ -76,21 +76,6 @@ public class SpringController {
     }
 
     //Plugin Pages
-    @RequestMapping("/apply")
-    public String apply(Map<String, Object> model) {
-        model.clear();
-        model.putAll(getModel());
-        return "jobs/apply";
-    }
-
-    @RequestMapping("/quote")
-    public String quote(Map<String, Object> model) {
-        model.clear();
-        model.putAll(getModel());
-        return "jobs/quote";
-    }
-
-    //Job pages
     @RequestMapping("/plugins/perworldchatplus")
     public String pluginPerWorldChatPlus(Map<String, Object> model) {
         model.clear();
