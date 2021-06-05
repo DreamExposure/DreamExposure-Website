@@ -8,7 +8,7 @@ plugins {
 repositories {
     mavenLocal()
     maven {
-        url = uri("https://repo.novafox161.com/repository/nova-public/")
+        url = uri("https://emily.dreamexposure.org/artifactory/dreamexposure-public/")
     }
     maven {
         url = uri("https://repo.spring.io/libs-release")
